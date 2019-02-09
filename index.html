@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+	
+	<head>
+		<title>Jeu de taquin</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+
+	<body>
+		<h1>Jeu de taquin</h1>
+		<!-- Menu pour choisir la difficulté (sera caché après avoir cliqué sur "Entrer" -->
+		<div id="intro">
+			<img id="imageIntro" src="#" alt="Coucher de soleil">
+			<p>
+				<label>Niveau de difficulté :</label>
+				<select id="choix">
+					<option value="3">8 Puzzle (facile)</option>
+					<option value="4">15 Puzzle (moyen)</option>
+					<option value="5">24 Puzzle (difficile)</option>
+				</select>
+			</p>
+			<p>
+				<button id="btnEntrer" onClick="jouer()">Entrer</button>
+			</p>
+		</div>
+		
+		<!-- Affichage du jeu (visible seulement après avoir cliqué sur entrer) -->
+		<div id="jeu">
+			<div id="chronometre">
+				<h2 id="affichage_chronometre">00:00:00</h2>
+			</div>
+			<div id="zoneJeu">
+				<h2>Puzzle</h2>
+				<canvas id="monCanevas"><!-- Le puzzle sera créé dynamiquement en fonction du niveau de difficulté choisi --></canvas>
+			</div>
+			<div id="solution">
+				<h2>Image originale</h2>
+				<img id="imageSolution" src="#" alt="Coucher de soleil">
+			</div>
+			<div id="btnNouvellePartie">
+				<button onClick="window.location.reload()">Nouvelle partie</button>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="script.js"></script>
+</html>
